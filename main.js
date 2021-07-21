@@ -20,7 +20,7 @@ function my_mousemove(e){
     current_position_of_mouse_x=e.clientX-canvas.offsetLeft;
     current_position_of_mouse_y=e.clientY-canvas.offsetTop;
 
-    if (mouseEvent="mouseDown"){
+    if (mouseEvent=="mouseDown"){
         ctx.beginPath()
         ctx.strokeStyle=color;
         ctx.lineWidth=width_of_line;
@@ -31,8 +31,10 @@ function my_mousemove(e){
         console.log("x="+ current_position_of_mouse_x+"y="+current_position_of_mouse_y);
         ctx.lineTo(current_position_of_mouse_x,current_position_of_mouse_y);
         ctx.stroke();
+        console.log(mouseEvent);
     }
-
+    mouseEvent="mouseMove";
+    console.log(mouseEvent);
     last_position_of_x=current_position_of_mouse_x;
     last_position_of_y=current_position_of_mouse_y;
 
